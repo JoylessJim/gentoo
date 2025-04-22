@@ -1,10 +1,5 @@
-!! Joylessjim URxvt configuration file
-
-!! When compiling URxvt, you should enable 256-colour support and perl
-!! in the USE flags, but if you are using URxvt as a binary, these options
-!! are most likely enable by default.
-
-!! To apply changes / this config file type into your terminal - xrdb ~/.Xresources
+!! install urxvt font size scripts
+!! gentoo x11-misc/urxvt-font-size
 
 ! special
 *.foreground:   #C5C8C6
@@ -25,19 +20,18 @@
 ! blue
 *.color4:       #3971ED
 *.color12:      #3971ED
-! magenta !! FIXES GENTOO LOGO
+! magenta
 *.color5:       #DA77CB
 *.color13:      #DA77CB
 ! cyan
 *.color6:       #39C8ED
 *.color14:      #39C8ED
-
 ! white
 *.color7:       #C5C8C6
 *.color15:      #FFFFFF
 
 !! Appearance
-URxvt.font: xft:Inconsolata:pixelsize=16:antialias=true
+URxvt.font: xft:monospace:pixelsize=16:antialias=true
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 500x600
@@ -51,16 +45,11 @@ URxvt.urgentOnBell: true
 URxvt.depth: 24
 URxvt.iso14755: false
 
-!! URxvt Perl Integration
-
+!! perl
 URxvt.perl-ext-common: matcher,font-size,clipboard
-
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-
-
 ! zoom in/out
 URxvt.keysym.C-j:       perl:font-size:increase
 URxvt.keysym.C-=:       perl:font-size:decrease
 URxvt.font-size.step: 2
-
